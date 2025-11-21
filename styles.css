@@ -1,0 +1,175 @@
+/* ----------------------------- */
+/* Modern Portfolio UI (Improved) */
+/* ----------------------------- */
+
+:root {
+  --bg: #f4f4ff;
+  --text: #1a1a2e;
+  --muted: #6b6b7a;
+  --accent: #6c63ff;
+  --card: #ffffff;
+  --radius: 16px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --gradient: linear-gradient(135deg, #8079ff, #b8b3ff);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ---------------- Header (Glass Effect) --------------- */
+
+.site-header.glass {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.35);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 0.8rem 0;
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero {
+  padding: 6rem 0 5rem;
+  background: var(--gradient);
+  color: white;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  opacity: 0.85;
+}
+
+.accent {
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn {
+  background: white;
+  color: var(--accent);
+  padding: 0.75rem 1.4rem;
+  font-weight: 600;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-outline {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.avatar {
+  font-size: 4rem;
+  width: 220px;
+  height: 220px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.glow {
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
+}
+
+/* ---------------- Projects ---------------- */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-media {
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 1.2rem;
+}
+
+.card-body h3 {
+  margin: 0 0 0.5rem;
+}
+
+.card-body p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+/* ---------------- About ---------------- */
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 2rem;
+}
+
+.skills li {
+  background: rgba(108, 99, 255, 0.15);
+  color: var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+}
+
+/* ---------------- Contact ---------------- */
+
+.contact-form input,
+textarea {
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* ---------------- Footer ---------------- */
+
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 2rem;
+}
